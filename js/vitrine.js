@@ -4,7 +4,8 @@ $(document).ready(function(){
         var desc = $(this).attr('desc');
         var img = this.querySelector('img').src;
         $('#modal-title').html($(this).attr('title'))
-        $('#modal-body').html("<img class='modal-img' src='"+img+"'><p>"+desc+"<p/><div class=\"btn-group\"><a href='#' class='btn btn-success' onclick=\"importTemplate('"+url+"')\">Import</a></div>");
+        $('#modal-body').html("<img class='modal-img img-fluid' src='"+img+"'><p>"+desc+"<p/>");
+        $('#modal-footer').html("<div class=\"btn-toolbar\">        <button type=\"button\" class=\"btn btn-secondary mr-2\" data-dismiss=\"modal\">Fermer</button><a href='#' class='btn btn-success' onclick=\"importTemplate('"+url+"')\">Utiliser</a></div>");
         $('#modal').modal('show');
     })
     $('.close').click(function(){
